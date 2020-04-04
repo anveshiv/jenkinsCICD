@@ -19,5 +19,11 @@ pipeline {
       }
     }
 
+    stage('End') {
+      steps {
+        archiveArtifacts(artifacts: '/tmp/abcd', allowEmptyArchive: true, caseSensitive: true)
+      }
+    }
+
   }
 }
