@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('Publish') {
+      steps {
+        jacoco(buildOverBuild: true, runAlways: true)
+      }
+    }
+
   }
 }
